@@ -27,7 +27,7 @@ function fetchRandomCharacter () {
         <p>Hair Color: ${data.hair_color}</p>
         <p>Skin Color: ${data.skin_color}</p>
         <p>Eye Color: ${data.eye_color}</p>
-        <Birth Year: ${data.birth_year}</p>
+        <p>Birth Year: ${data.birth_year}</p>
         <p>Gender: ${data.gender}</p>`;
     })
     .catch(error => console.log('Error: ', error));
@@ -43,13 +43,13 @@ function fetchAllCharacters() {
             let li = document.createElement('li');
             li.textContent = character.name;
             li.addEventListener('click', function() {
-                document.getElementById(character).innerHTML = `<h2>${character.name}</h2>
+                document.getElementById('character').innerHTML = `<h2>${character.name}</h2>
                 <p>Height: ${character.height}cm</p>
                 <p>Mass: ${character.mass}kg</p>
                 <p>Hair Color: ${character.hair_color}</p>
                 <p>Skin Color: ${character.skin_color}</p>
                 <p>Eye Color: ${character.eye_color}</p>
-                <Birth Year: ${character.birth_year}</p>
+                <p>Birth Year: ${character.birth_year}</p>
                 <p>Gender: ${character.gender}</p>`;
             })
             charactersList.appendChild(li);
