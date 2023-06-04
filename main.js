@@ -7,7 +7,7 @@ fetchRandomCharacter();
 
 document.getElementById('get-all-characters').
 addEventListener('click', function() {
-
+fetchAllCharacters();
 });
 
 searchInput.addEventListener('keyup', function() {
@@ -29,6 +29,31 @@ function fetchRandomCharacter () {
         <p>Eye Color: ${data.eye_color}</p>
         <Birth Year: ${data.birth_year}</p>
         <p>Gender: ${data.gender}</p>`;
+    })
+    .catch(error => console.log('Error: ', error));
+}
+function fetchAllCharacters() {
+    fetch('https://swapi.dev/api/people/')
+    .then(response => response.json())
+    .then(data => {
+        let characters = data.results;
+        let charactersList = document.getElementById('characters');
+        charactersList.innerHTML = '';
+        characters.forEach(character => {
+            let li = document.createElement('li');
+            li.textContent = character.name;
+            li.addEventListener('click', function() {
+                document.getElementById(character).innerHTML = `<h2>${character.name}</h2>
+                <p>Height: ${character.height}cm</p>
+                <p>Mass: ${character.mass}kg</p>
+                <p>Hair Color: ${character.hair_color}</p>
+                <p>Skin Color: ${character.skin_color}</p>
+                <p>Eye Color: ${character.eye_color}</p>
+                <Birth Year: ${character.birth_year}</p>
+                <p>Gender: ${character.gender}</p>`;
+            })
+            charactersList.appendChild(li);
+                });
     })
     .catch(error => console.log('Error: ', error));
 }
