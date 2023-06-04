@@ -2,7 +2,10 @@
     --info-color: #4e54c8;
     --h1--color: #fff;
     --main-bg: #1b1b2f;
-
+    --button-color: #0f3468;
+    --character-color: #0f3460;
+    --cool-text: #e94560;
+    --character-li-color: #16213e;
 }
 
 
@@ -16,7 +19,7 @@ body {
     color: #000;
     font-family: fantasy;
     background: var(--main-bg);
-    align-items: center;
+    text-align: center;
     padding: 1rem;
 
 }
@@ -27,9 +30,53 @@ header {
 
 h1 {
     text-shadow: gold 3px 1px 4px;
+    -webkit-text-stroke: 0.1px #FFE81F;
 }
 
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background: var(--button-color);
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {
+    background-color: violet
+}
+input {
+    width: 30vw;
+    padding: 8px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+#character {
+    background: var(--character-color);
+    color: var(--cool-text);
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 600px;
 
+}
+#characters {
+    list-style: none;
+    padding: 0;
+}
+#characters li {
+    background: var(--character-li-color);
+    color: #fff;
+    margin: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    cursor: pointer;
+}
 
-
-
+@media (max-width: 600px) {
+    input {
+        width 80vw;
+    }
+}
