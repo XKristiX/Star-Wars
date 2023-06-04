@@ -2,9 +2,10 @@ let searchInput = document.getElementById('search');
 
 document.getElementById('get-character').addEventListener
 ('click', function() {
-
+fetchRandomCharacter();
 });
-document.getElementById('get-all-characters')
+
+document.getElementById('get-all-characters').
 addEventListener('click', function() {
 
 });
@@ -31,5 +32,10 @@ function fetchRandomCharacter () {
     })
     .catch(error => console.log('Error: ', error));
 }
+
+
+
+
+
 
 
