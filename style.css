@@ -1,0 +1,35 @@
+:root {
+    --info-color: #4e54c8;
+    --h1--color: #fff;
+    --main-bg: #1b1b2f;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    color: #000;
+    font-family: fantasy;
+    background: var(--main-bg);
+    align-items: center;
+    padding: 1rem;
+
+}
+
+header {
+    margin: 2rem;
+}
+
+h1 {
+    text-shadow: gold 3px 1px 4px;
+}
+
+
+
+
+
