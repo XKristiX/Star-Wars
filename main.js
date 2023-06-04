@@ -31,7 +31,8 @@ function fetchRandomCharacter () {
         <p>Gender: ${data.gender}</p>`;
     })
     .catch(error => console.log('Error: ', error));
-}
+};
+
 function fetchAllCharacters() {
     fetch('https://swapi.dev/api/people/')
     .then(response => response.json())
