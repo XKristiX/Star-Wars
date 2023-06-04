@@ -21,11 +21,14 @@ body {
     background: var(--main-bg);
     text-align: center;
     padding: 1rem;
+    font-weight: 100;
+    font-size: 40px;
 
 }
 
 header {
     margin: 2rem;
+    font-size: 48px;
 }
 
 h1 {
