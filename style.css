@@ -2,7 +2,7 @@
     --info-color: #4e54c8;
     --h1--color: #fff;
     --main-bg: #1b1b2f;
-    --button-color: #0f3468;
+    --button-color: #4e54c8;
     --character-color: #0f3460;
     --cool-text: #e94560;
     --character-li-color: #16213e;
@@ -68,7 +68,7 @@ input {
 #characters li {
     background: var(--character-li-color);
     color: #fff;
-    margin: 10px;
+    padding: 10px;
     margin: 10px auto;
     border-radius: 10px;
     max-width: 600px;
@@ -77,6 +77,6 @@ input {
 
 @media (max-width: 600px) {
     input {
-        width 80vw;
+        width: 80vw;
     }
 }
